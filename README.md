@@ -1,1 +1,1 @@
-# page-ia
+# artificial-intelligence
