@@ -184,7 +184,7 @@
        
        #particles-js {
            width: 100%;
-           height: 30vh;
-           background-color: rgb(3, 92, 128);
-           position: absolute;
+           height: 100vh;
+           background-color: rgb(233, 233, 233);
+           position: fixed;
        }
