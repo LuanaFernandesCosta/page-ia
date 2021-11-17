@@ -180,3 +180,11 @@
        .custon-li {
            padding-left: 70px;
        }
+       /* particulas */
+       
+       #particles-js {
+           width: 100%;
+           height: 30vh;
+           background-color: rgb(3, 92, 128);
+           position: absolute;
+       }
