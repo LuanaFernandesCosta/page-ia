@@ -205,7 +205,7 @@
        .title {
            width: 50%;
            padding-top: 250px;
-           z-index: 999;
+           z-index: 99;
        }
        
        .title h2 {
