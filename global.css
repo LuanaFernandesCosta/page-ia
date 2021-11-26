@@ -48,6 +48,12 @@
            padding: 0;
        }
        
+       .logo a {
+           color: #fff;
+           text-decoration: none;
+           cursor: pointer;
+       }
+       
        .inner {
            width: 800px;
            position: relative;
@@ -96,7 +102,10 @@
        }
        
        nav ul {
-           float: right;
+           display: flex;
+           flex-direction: row;
+           font-size: smaller;
+           margin-left: 5%;
        }
        
        nav li {
