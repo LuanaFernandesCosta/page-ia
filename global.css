@@ -16,12 +16,18 @@
            color: #000;
        }
        
+       @font-face {
+           font-family: Equinox;
+           src: url(/fonts/Equinox\ Bold.otf)
+       }
+       
        body {
            margin: 0;
            padding: 0;
            height: 100vh;
            font-size: 14px;
            line-height: 1.5;
+           background-color: #E0E0E0;
        }
        
        ul,
@@ -41,6 +47,12 @@
            font-weight: 400;
            margin: 0;
            padding: 0;
+       }
+       
+       .logo a {
+           color: #fff;
+           text-decoration: none;
+           cursor: pointer;
        }
        
        .inner {
@@ -91,7 +103,10 @@
        }
        
        nav ul {
-           float: right;
+           display: flex;
+           flex-direction: row;
+           font-size: smaller;
+           margin-left: 5%;
        }
        
        nav li {
@@ -184,7 +199,213 @@
        
        #particles-js {
            width: 100%;
-           height: 30vh;
-           background-color: rgb(3, 92, 128);
+           height: 100vh;
+           background-color: rgb(224, 224, 224);
+           position: fixed;
+       }
+       
+       .conteudo-home {
+           width: 80%;
+           margin: 0 auto;
+           display: flex;
+           flex-direction: row;
+           z-index: 9999;
+       }
+       
+       .title {
+           width: 50%;
+           padding-top: 250px;
+           z-index: 99;
+       }
+       
+       .title h2 {
+           font-family: 'Equinox';
+           font-size: 40px;
+           color: rgb(104, 104, 104);
+       }
+       
+       .title h1 {
+           top: 290px;
            position: absolute;
+           font-family: 'Equinox';
+           font-size: 80px;
+           color: #0086ba;
+           text-shadow: 0 0px 5px #45cadb;
+       }
+       
+       .text-animation {
+           padding-top: 100px;
+           margin-left: 6px;
+       }
+       
+       .text-animation span {
+           font-family: 'Equinox';
+           font-size: 15px;
+       }
+       
+       .img-text img {
+           display: inline-block;
+       }
+       
+       footer {
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
+           width: 100%;
+           height: 100px;
+           background-color: #0086BA;
+           margin-top: 30px;
+       }
+       
+       footer span {
+           font-size: 10px;
+           color: #fff;
+           font-family: "Lato", "Verdana", sans-serif;
+           margin: auto;
+       }
+       
+       .float-buttom {
+           width: 55px;
+           height: 55px;
+           border-radius: 50%;
+           background-image: linear-gradient(to right, #11111181, rgb(10, 10, 10));
+           position: fixed;
+           bottom: 50px;
+           right: 50px;
+           cursor: pointer;
+           box-shadow: 0px 0px 10px #666;
+           animation: floatB-out 0.3s;
+           transition: 0.3s;
+       }
+       
+       .plus {
+           color: white;
+           position: relative;
+           top: 0;
+           display: block;
+           bottom: 25px;
+           left: 0;
+           right: 0;
+           text-align: center;
+           padding: 0px;
+           margin: 0;
+           line-height: 55px;
+           font-size: 38px;
+           font-family: "Roboto";
+           font-weight: 300;
+           animation: plus-out 0.3s;
+           transition: all 0.3s;
+       }
+       
+       .float-menu:hover .plus {
+           animation: plus-in 0.2s linear;
+           animation-fill-mode: forwards;
+       }
+       
+       .edit {
+           position: absolute;
+           top: 0;
+           display: block;
+           bottom: 0;
+           left: 0;
+           display: block;
+           right: 0;
+           padding: 0;
+           opacity: 0;
+           margin: auto;
+           line-height: 65px;
+           transform: rotateZ(-70deg);
+           transition: all 0.3s;
+           animation: edit-out 0.3s;
+       }
+       
+       .in-text {
+           font-size: 20px;
+           position: fixed;
+           opacity: 0;
+           height: 90px;
+           width: 250px;
+           bottom: 3px;
+           right: -80px;
+           transition: all 0.3s;
+           animation: inT-out 0.3s;
+           color: #FFFFFF;
+           margin: auto;
+       }
+       
+       .in-text:hover {
+           animation: inT-in 0.3s;
+           animation-fill-mode: forwards;
+       }
+       
+       .float-buttom:hover {
+           width: 315px;
+           height: 55px;
+           background-image: linear-gradient(to right, #11111181, rgb(10, 10, 10));
+           position: fixed;
+           bottom: 50px;
+           right: 50px;
+           border-top-right-radius: 40px;
+           border-bottom-right-radius: 40px;
+           border-top-left-radius: 40px;
+           border-bottom-left-radius: 40px;
+           cursor: pointer;
+           box-shadow: 0px 0px 10px #666;
+           transition: width 0.3s;
+       }
+       
+       @keyframes plus-in {
+           from {
+               opacity: 1;
+               transform: translateX(0px);
+           }
+           to {
+               opacity: 1;
+               transform: translateX(-120px);
+           }
+       }
+       
+       @keyframes plus-out {
+           from {
+               opacity: 1;
+               transform: translateX(-120px);
+           }
+           to {
+               opacity: 1;
+               transform: translateX(0px);
+           }
+       }
+       
+       @keyframes inT-in {
+           from {
+               opacity: 0;
+               transform: translateX(0px);
+           }
+           to {
+               opacity: 1;
+               transform: translateX(-100px);
+           }
+       }
+       
+       @keyframes inT-out {
+           from {
+               opacity: 1;
+               transform: translateX(-100px);
+           }
+           to {
+               opacity: 0;
+               transform: translateX(0px);
+           }
+       }
+       
+       @keyframes floatB-out {
+           from {
+               opacity: 1;
+               width: 290px;
+           }
+           to {
+               opacity: 1;
+               width: 55px;
+           }
        }
